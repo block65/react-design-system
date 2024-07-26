@@ -22,17 +22,13 @@ export const Badge = forwardRef(
         component="span"
         padding="2"
         paddingInline="3"
+        fontSize="0"
+        fontWeight="medium"
         className={[className, variant && badgePurposeClassNames[variant]]}
         {...props}
       >
         {isStringLike(children) ? (
-          <Box
-            component="span"
-            fontSize="0"
-            fontWeight="medium"
-            textOverflow="ellipsis"
-            textAlign="center"
-          >
+          <Box component="span" textOverflow="ellipsis" textAlign="center">
             {children}
           </Box>
         ) : (

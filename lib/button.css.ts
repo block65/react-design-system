@@ -79,6 +79,9 @@ export const buttonClassName = style([
     userSelect: 'none',
     borderRadius: baseVars.border.radius,
     borderWidth: baseVars.border.width,
+    transitionProperty: 'background-color, color, border-color',
+    transitionDuration: '0.08s',
+    transitionTimingFunction: 'ease-in-out',
     selectors: {
       '&[disabled]': {
         pointerEvents: 'none',
@@ -118,14 +121,18 @@ export const iconClassName = style({
   width: '0.7em', // hack, this should be variable based on the font-size
 });
 
-export const visiblyHiddenClass = style({
-  visibility: 'hidden',
-});
-
 export const busyButtonClass = style({
   pointerEvents: 'none',
 });
 
+export const busySpinnerClass = style({
+  position: 'absolute',
+});
+
 export const inlineBleedClass = style({
   marginBlock: calc(propsVars.space[0]).negate().toString(),
+});
+
+export const visiblyHiddenClass = style({
+  visibility: 'hidden',
 });
